@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "account",
+  "info": {
+    "name": "account",
+    "description": "Facebook accounts"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "type": {
+      "default": "facebook",
+      "type": "enumeration",
+      "enum": [
+        "facebook"
+      ]
+    },
+    "user": {
+      "model": "user",
+      "via": "accounts",
+      "plugin": "users-permissions"
+    },
+    "accessToken": {
+      "default": "",
+      "type": "string"
+    },
+    "externalId": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "posts": {
+      "collection": "post",
+      "via": "account"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "profile",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "model": "user",
+      "via": "profile",
+      "plugin": "users-permissions"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "loggedAt": {
+      "default": "",
+      "type": "date"
+    },
+    "lastLoggedAt": {
+      "default": "",
+      "type": "date"
+    }
+  }
+}

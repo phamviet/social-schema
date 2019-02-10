@@ -1,0 +1,21 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "settings": {
+        "client": "mongo",
+        "host": "aws-sp-azv6e.mongodb.net",
+        "srv": true,
+        "port": "27017",
+        "database": "fb_backups",
+        "username": "pepsi",
+        "password": "5a61798fd383ad59018ae41c"
+      },
+      "options": {
+        "authenticationDatabase": "admin",
+        "ssl": true
+      },
+      "connector": "strapi-hook-mongoose"
+    }
+  }
+}

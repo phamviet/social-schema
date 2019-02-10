@@ -1,0 +1,54 @@
+{
+  "connection": "default",
+  "collectionName": "post",
+  "info": {
+    "name": "post",
+    "description": "User posts"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "message": {
+      "default": "",
+      "type": "text"
+    },
+    "type": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "link",
+        " status",
+        " photo",
+        " video",
+        " offer"
+      ]
+    },
+    "post_id": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "data": {
+      "default": "",
+      "type": "json"
+    },
+    "attachments": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "account": {
+      "model": "account",
+      "via": "posts"
+    }
+  }
+}
